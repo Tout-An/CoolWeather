@@ -7,14 +7,17 @@
     <uses-sdk
         android:minSdkVersion="17"
         android:targetSdkVersion="17" />
-
+<uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <service android:name="service.AutoUpdateService"></service>
+        <service android:name="receiver.AutoUpdateReceiver"></service>
+        <activity android:name="ctiviy.WeatherActivity"></activity>
         <activity
-            android:name="com.coolwheather.app.MainActivity"
+            android:name="com.coolwheather.app.activity.ChooseAreaActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
